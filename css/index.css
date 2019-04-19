@@ -105,12 +105,19 @@ img {
   .main-header {
     flex-direction: column;
     text-align: center;
+    position: relative;
   }
 }
 .main-header__nav {
+  display: flex;
   display: inline-flex;
   justify-content: flex-end;
   flex-basis: 33%;
+}
+@media (max-width: 520px) {
+  .main-header__nav {
+    flex-direction: column;
+  }
 }
 .main-header__a {
   padding: 1rem 1.5rem;
@@ -119,9 +126,19 @@ img {
   color: #999;
   border-bottom: 2px transparent #50b927ea;
 }
+@media (max-width: 520px) {
+  .main-header__a {
+    font-size: 2rem;
+  }
+}
 .main-header__a:hover {
   color: #222;
   border-bottom: 1px solid #50b927ea;
+}
+@media (max-width: 520px) {
+  .main-header__a:hover {
+    border-bottom: 0px solid black;
+  }
 }
 .main-header__a--logo {
   padding: 1rem 1.5rem;
